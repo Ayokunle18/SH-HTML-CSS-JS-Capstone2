@@ -8,7 +8,14 @@ const eye1 = document.querySelector(".eye1");
 const passC = document.querySelector("#passwordBoxC");
 const form = document.querySelector("form");
 const small = document.querySelector("small");
+const b = document.querySelector("b");
+const b1 = document.querySelector("h4");
+const user = document.querySelector("#username");
+const email = document.querySelector("#emailBox");
+const allInput = document.querySelectorAll("input");
 
+
+// allInput.style.backgroundColor="transparent";
 
 // Hamburger nav
 button.addEventListener('click' , ()=>{
@@ -95,13 +102,26 @@ function checkPasswordsMatch(input1, input2) {
     }
   }
 
+//   check length
+  function checkLength(input, show, num) {
+    if (input.value.length<num) {
+     show.textContent= `${input.name} should be a minimum of ${num} characters`;
+
+    }
+    else{
+        show.textContent= "";
+
+    }
+  }
+
 //   submit button
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+    checkLength(user, b, 8);
+    checkLength(pass, b1, 7);
   
     // checkRequired([username, email, password, password2]);
     // checkLength(username, 3, 15);
     // checkLength(password, 6, 25);
-    // checkEmail(email);
     checkPasswordsMatch(pass, passC);
   });
