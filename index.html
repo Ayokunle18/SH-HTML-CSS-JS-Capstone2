@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+   <h1>My Form</h1>
+        <ul class="desktop">
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact Us</li>
+            <li>Sign Up</li>
+            
+        </ul>
+        
+            <button class="ham">
+               <img src="icon-hamburger.svg" alt="icon-hamburger">
+            </button>
+    </nav>
+         <div class="mobileMenu" id="1">
+             <ul class="mobile">
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact Us</li>
+                <li>Sign Up</li>
+             </ul>
+    </div>
+ <div class="bdy">
+    <div class="formBox">
+        <h2>Demo Form</h2>
+        <p>Kindly fill in your details </p>
+
+        <form class="loginForm">
+            <div id="errorMessage"></div>
+            <div><input type="text" name="username" id="username" class="formField" placeholder="Username"></div> 
+           <hr>
+           <div><input type="email" name="email" id="emailBox" class="formField" placeholder="Email Address"></div> 
+           <hr>
+           <div><input type="tel" name="phone" id="phone" class="formField" placeholder="Phone number"></div> 
+           <hr>
+           <div class="pass"> <input type="password" name="password" id="passwordBox" class="formField" placeholder="Password"> <button><img class="eye" src="eye1.png"/> </button> </div>
+           <hr>
+           <div class="pass"> <input type="password" name="passwordConfirm" id="passwordBoxC" class="formField" placeholder="Confirm Password"> <button><img class="eye1" src="eye1.png"/> </button> </div>
+           <hr>
+          <div class="submit"><input type="submit" name="submit" id="submitButton" ></div>  
+        </form>
+    </div>
+</div> 
+    <script src="main.js"></script>
+</body>
+</html>
